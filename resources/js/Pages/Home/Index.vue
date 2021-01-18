@@ -1,7 +1,7 @@
 <template>
     <AppLayout>
-        <div class="h-80 min-h-full"> asd </div>
-        <div class="h-80 min-h-full bg-21212E"> asd </div>
+        <div class="h-80 min-h-full"></div>
+        <div class="h-80 min-h-full bg-21212E"></div>
     </AppLayout>
 
 </template>
