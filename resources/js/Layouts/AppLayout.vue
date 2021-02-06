@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-col h-screen bg-2B2E3A">
-        <header class="sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
-            <div class="flex items-center justify-between px-4 py-3 sm:p-0">
+    <div class="flex flex-col h-screen bg-black-rock">
+        <header class="md:flex md:justify-between md:items-center md:px-32 2xl:px-64 md:py-16">
+            <div class="flex items-center justify-between px-4 py-3 md:p-0">
                 <div>
-                    <img class="h-8" src="/images/logo.ico" alt="Workcation">
+                    <img class="h-20" src="/images/logo.ico" alt="Workcation">
                 </div>
-                <div class="sm:hidden">
+                <div class="md:hidden">
                     <button @click="isOpen = !isOpen" type="button"
                             class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
                         <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
@@ -17,14 +17,14 @@
                     </button>
                 </div>
             </div>
-            <nav :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-2 pb-4 sm:flex sm:p-0">
-                <a href="#" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">Experiences</a>
+            <nav :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-2 pb-4 md:flex md:p-0">
+                <a href="#" class="block px-2 py-1 text-zircon font-semibold hover:bg-neon-carrot border-b-2 border-neon-carrot">Experiences</a>
                 <a href="#"
-                   class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Education</a>
+                   class="mt-1 block px-2 py-1 text-zircon font-semibold hover:bg-neon-carrot sm:mt-0 sm:ml-2">Education</a>
                 <a href="#"
-                   class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Testimonials</a>
+                   class="mt-1 block px-2 py-1 text-zircon font-semibold hover:bg-neon-carrot sm:mt-0 sm:ml-2">Testimonials</a>
                 <a href="#"
-                   class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Portfolio</a>
+                   class="mt-1 block px-2 py-1 text-zircon font-semibold hover:bg-neon-carrot sm:mt-0 sm:ml-2">Portfolio</a>
             </nav>
         </header>
 
@@ -32,11 +32,11 @@
             <slot></slot>
         </main>
 
-        <footer class="bg-21212E">
+        <footer class="bg-black-rock">
             <div class="container mx-auto px-6">
                 <div class="mt-6 border-t-2 border-gray-300 flex flex-col items-center">
                     <div class="sm:w-2/3 text-center py-6">
-                        <p class="text-sm text-white font-bold mb-2">
+                        <p class="text-sm text-zircon font-bold mb-2">
                             &#169; {{ new Date().getFullYear() }} by Villaflor
                         </p>
                     </div>

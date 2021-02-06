@@ -14,8 +14,13 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                '2B2E3A': '#2B2E3A',
-                '21212E': '#21212E'
+                'black-rock': '#2C2F3B',
+                'blue-zodiac': '#393C4B',
+                'comet': '#606371',
+                'haiti': '#21212E',
+                'manatee': '#878A99',
+                'neon-carrot': '#FEA634',
+                'zircon': '#E6E7EA',
             }
         },
     },
