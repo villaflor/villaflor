@@ -7,9 +7,10 @@ import PortalVue from 'portal-vue';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faLinkedinIn, faGlobeAmericas, faGithub)
+library.add(faLinkedinIn, faGlobeAmericas, faGithub, faMapMarkerAlt)
 
 Vue.mixin({ methods: { route } });
 Vue.use(InertiaPlugin);

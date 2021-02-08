@@ -21,7 +21,7 @@ module.exports = {
                 'manatee': '#878A99',
                 'neon-carrot': '#FEA634',
                 'zircon': '#E6E7EA',
-            }
+            },
         },
     },
 

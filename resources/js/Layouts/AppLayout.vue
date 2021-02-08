@@ -34,7 +34,7 @@
 
         <footer class="bg-black-rock">
             <div class="container mx-auto px-6">
-                <div class="mt-6 border-t-2 border-gray-300 flex flex-col items-center">
+                <div class="mt-6 border-t-2 border-neon-carrot flex flex-col items-center">
                     <div class="sm:w-2/3 text-center py-6">
                         <p class="text-sm text-zircon font-bold mb-2">
                             &#169; {{ new Date().getFullYear() }} by Villaflor
