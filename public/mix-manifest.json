@@ -1,4 +1,21 @@
 {
-    "/js/app.js": "/js/app.js?id=47d5086e9c74178320e3",
-    "/css/app.css": "/css/app.css?id=1fcef313206f58acea25"
+    "/js/app.js": "/js/app.js",
+    "/css/theme/amber.css": "/css/theme/amber.css",
+    "/css/theme/blue.css": "/css/theme/blue.css",
+    "/css/theme/blue-grey.css": "/css/theme/blue-grey.css",
+    "/css/theme/brown.css": "/css/theme/brown.css",
+    "/css/theme/cyan.css": "/css/theme/cyan.css",
+    "/css/theme/deep-orange.css": "/css/theme/deep-orange.css",
+    "/css/theme/deep-purple.css": "/css/theme/deep-purple.css",
+    "/css/theme/green.css": "/css/theme/green.css",
+    "/css/theme/indigo.css": "/css/theme/indigo.css",
+    "/css/theme/light-blue.css": "/css/theme/light-blue.css",
+    "/css/theme/light-green.css": "/css/theme/light-green.css",
+    "/css/theme/lime.css": "/css/theme/lime.css",
+    "/css/theme/orange.css": "/css/theme/orange.css",
+    "/css/theme/pink.css": "/css/theme/pink.css",
+    "/css/theme/purple.css": "/css/theme/purple.css",
+    "/css/theme/teal.css": "/css/theme/teal.css",
+    "/css/app.css": "/css/app.css",
+    "/js/main.js": "/js/main.js"
 }
