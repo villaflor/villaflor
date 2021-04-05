@@ -11,14 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').vue()
+mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/main.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
-        require('autoprefixer'),
+        //
     ])
-    .webpackConfig(require('./webpack.config'));
-
-if (mix.inProduction()) {
-    mix.version();
-}
+    .sass('resources/css/sass/amber.scss', 'public/css/theme')
+    .sass('resources/css/sass/blue.scss', 'public/css/theme')
+    .sass('resources/css/sass/blue-grey.scss', 'public/css/theme')
+    .sass('resources/css/sass/brown.scss', 'public/css/theme')
+    .sass('resources/css/sass/cyan.scss', 'public/css/theme')
+    .sass('resources/css/sass/deep-orange.scss', 'public/css/theme')
+    .sass('resources/css/sass/deep-purple.scss', 'public/css/theme')
+    .sass('resources/css/sass/green.scss', 'public/css/theme')
+    .sass('resources/css/sass/indigo.scss', 'public/css/theme')
+    .sass('resources/css/sass/light-blue.scss', 'public/css/theme')
+    .sass('resources/css/sass/light-green.scss', 'public/css/theme')
+    .sass('resources/css/sass/lime.scss', 'public/css/theme')
+    .sass('resources/css/sass/orange.scss', 'public/css/theme')
+    .sass('resources/css/sass/pink.scss', 'public/css/theme')
+    .sass('resources/css/sass/purple.scss', 'public/css/theme')
+    .sass('resources/css/sass/teal.scss', 'public/css/theme');
