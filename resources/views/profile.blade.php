@@ -201,55 +201,55 @@
         </div>
     </section>
 
-    <section id="portfolio-section" class="portfolio-section section">
-        <h2 class="section-title">Portfolio</h2>
-        <ul id="filters" class="filters clearfix">
-            <li class="type active" data-filter="*">All</li>
-            @php
-                $portfolioType = []
-            @endphp
+{{--    <section id="portfolio-section" class="portfolio-section section">--}}
+{{--        <h2 class="section-title">Portfolio</h2>--}}
+{{--        <ul id="filters" class="filters clearfix">--}}
+{{--            <li class="type active" data-filter="*">All</li>--}}
+{{--            @php--}}
+{{--                $portfolioType = []--}}
+{{--            @endphp--}}
 
 
-            @foreach($profile['portfolios'] as $portfolio)
-                @foreach($portfolio['types'] as $types)
-                    @if(! in_array($types['reference'], $portfolioType))
-                        <li class="type" data-filter=".{{$types['reference']}}">{{$types['name']}}</li>
-                        @php
-                            $portfolioType[] = $types['reference']
-                        @endphp
-                    @endif
-                @endforeach
-            @endforeach
-        </ul>
+{{--            @foreach($profile['portfolios'] as $portfolio)--}}
+{{--                @foreach($portfolio['types'] as $types)--}}
+{{--                    @if(! in_array($types['reference'], $portfolioType))--}}
+{{--                        <li class="type" data-filter=".{{$types['reference']}}">{{$types['name']}}</li>--}}
+{{--                        @php--}}
+{{--                            $portfolioType[] = $types['reference']--}}
+{{--                        @endphp--}}
+{{--                    @endif--}}
+{{--                @endforeach--}}
+{{--            @endforeach--}}
+{{--        </ul>--}}
 
-        <div class="items-wrapper isotope row">
-            @foreach($profile['portfolios'] as $portfolio)
-                @php
-                    $portfolioType = [];
-                    foreach ($portfolio['types'] as $type) {
-                        $portfolioType[] = $type['reference'];
-                    }
+{{--        <div class="items-wrapper isotope row">--}}
+{{--            @foreach($profile['portfolios'] as $portfolio)--}}
+{{--                @php--}}
+{{--                    $portfolioType = [];--}}
+{{--                    foreach ($portfolio['types'] as $type) {--}}
+{{--                        $portfolioType[] = $type['reference'];--}}
+{{--                    }--}}
 
-                    $portfolioType = implode(' ', $portfolioType)
-                @endphp
+{{--                    $portfolioType = implode(' ', $portfolioType)--}}
+{{--                @endphp--}}
 
-                <div class="item {{$portfolioType}} col-lg-3 col-6">
-                    <div class="item-inner">
-                        <figure class="figure">
-                            <img class="img-fluid" src="{{$portfolio['image']}}" alt=""/>
-                        </figure>
-                        <div class="content text-left">
-                            <h3 class="sub-title"><a href="{{$portfolio['url'] ?? '#'}}">{{$portfolio['title']}}</a>
-                            </h3>
-                            <div class="meta">{{$portfolio['meta']}}</div>
-                            <div class="action"><a href="#">View on Github</a></div>
-                        </div><!--//content-->
-                        <a class="link-mask" href="{{$portfolio['url'] ?? '#'}}"></a>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </section>
+{{--                <div class="item {{$portfolioType}} col-lg-3 col-6">--}}
+{{--                    <div class="item-inner">--}}
+{{--                        <figure class="figure">--}}
+{{--                            <img class="img-fluid" src="{{$portfolio['image']}}" alt=""/>--}}
+{{--                        </figure>--}}
+{{--                        <div class="content text-left">--}}
+{{--                            <h3 class="sub-title"><a href="{{$portfolio['url'] ?? '#'}}">{{$portfolio['title']}}</a>--}}
+{{--                            </h3>--}}
+{{--                            <div class="meta">{{$portfolio['meta']}}</div>--}}
+{{--                            <div class="action"><a href="#">View on Github</a></div>--}}
+{{--                        </div><!--//content-->--}}
+{{--                        <a class="link-mask" href="{{$portfolio['url'] ?? '#'}}"></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <section id="contact-section" class="contact-section section">
         <h2 class="section-title">Get in Touch</h2>
