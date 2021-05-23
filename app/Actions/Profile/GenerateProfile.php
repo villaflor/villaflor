@@ -168,7 +168,7 @@ class GenerateProfile
                     "title" => "Developer-Team Lead",
                     "company" => "Wise Publishing, Inc.",
                     "location" => "Toronto, Canada",
-                    "start_date" => "Sept, 2019",
+                    "start_date" => "May, 2021",
                     "end_date" => null,
                     "description" => "Permanent Full-time",
                 ],
