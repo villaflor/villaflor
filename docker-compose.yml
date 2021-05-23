@@ -1,54 +1,54 @@
 version: '3'
 services:
-    villaflor:
-        build:
-            context: ./docker/PHP8.0
-            dockerfile: Dockerfile
-            args:
-                WWWGROUP: '${WWWGROUP:-20}'
-        image: villaflor-8.0/app
-        restart: always
-        ports:
-            - '${APP_PORT:-80}:80'
-        environment:
-            WWWUSER: '${WWWUSER:-501}'
-            LARAVEL_VILLAFLOR: 1
-        volumes:
-            - '.:/var/www/html'
-        networks:
-            - villaflor
-        depends_on:
-#            - mysql
-            - redis
-#    mysql:
-#        image: 'mysql:8.0'
-#        ports:
-#            - '${FORWARD_DB_PORT:-3306}:3306'
-#        environment:
-#            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-#            MYSQL_DATABASE: '${DB_DATABASE}'
-#            MYSQL_USER: '${DB_USERNAME}'
-#            MYSQL_PASSWORD: '${DB_PASSWORD}'
-#            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-#        volumes:
-##            - 'villaflormysql:/var/lib/mysql'
-#            - './data/mysql:/var/lib/mysql'
-#        networks:
-#            - villaflor
-#        healthcheck:
-#          test: ["CMD", "mysqladmin", "ping"]
-    redis:
-        image: 'redis:6.2-alpine'
-        restart: always
-        ports:
-            - '${FORWARD_REDIS_PORT:-6379}:6379'
-        volumes:
-#            - 'villaflorredis:/data'
-            - './data/redis:/data'
-        networks:
-            - villaflor
-        healthcheck:
-          test: ["CMD", "redis-cli", "ping"]
+  villaflor:
+    build:
+      context: ./docker/PHP8.0
+      dockerfile: Dockerfile
+      args:
+        WWWGROUP: '${WWWGROUP:-20}'
+    image: villaflor-8.0/app
+    restart: always
+    ports:
+      - '${APP_PORT:-80}:80'
+    environment:
+      WWWUSER: '${WWWUSER:-501}'
+      LARAVEL_VILLAFLOR: 1
+    volumes:
+      - '.:/var/www/html'
+    networks:
+      - villaflor
+      - nginx-pm_default
+    depends_on:
+      #            - mysql
+      - redis
+  #    mysql:
+  #        image: 'mysql:8.0'
+  #        ports:
+  #            - '${FORWARD_DB_PORT:-3306}:3306'
+  #        environment:
+  #            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+  #            MYSQL_DATABASE: '${DB_DATABASE}'
+  #            MYSQL_USER: '${DB_USERNAME}'
+  #            MYSQL_PASSWORD: '${DB_PASSWORD}'
+  #            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  #        volumes:
+  ##            - 'villaflormysql:/var/lib/mysql'
+  #            - './data/mysql:/var/lib/mysql'
+  #        networks:
+  #            - villaflor
+  #        healthcheck:
+  #          test: ["CMD", "mysqladmin", "ping"]
+  redis:
+    image: 'redis:6.2-alpine'
+    restart: always
+    ports:
+      - '${FORWARD_REDIS_PORT:-6379}:6379'
+    volumes:
+      - './data/redis:/data'
+    networks:
+      - villaflor
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
 #    cron:
 #        build:
 #          context: ./docker/Crontab
@@ -62,8 +62,11 @@ services:
 #            - mysql
 #            - redis
 networks:
-    villaflor:
-        driver: bridge
+  nginx-pm_default:
+    external:
+      name: nginx-pm_default
+  villaflor:
+    driver: bridge
 #volumes:
 #    villaflormysql:
 #        driver: local
