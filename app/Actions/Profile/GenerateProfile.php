@@ -150,7 +150,7 @@ class GenerateProfile
                 [
                     "name" => "",
                     "position" => "Management",
-                    "institution" => "Wise Publishing",
+                    "institution" => "Wise Publishing, Inc",
                     "made_at" => "Apr, 2021",
                     "message" => "Mark has an encyclopedic knowledge of our platforms. He is able to work directly with stakeholders to produce innovative products that drive growth. Mark provides guidance on best practices, making each project better than the last. He does all of that while remaining good-natured, patient and helpful — with all members of the team.",
                 ],
