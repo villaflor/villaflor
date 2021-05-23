@@ -148,6 +148,13 @@ class GenerateProfile
             ],
             "testimonials" => [
                 [
+                    "name" => "",
+                    "position" => "Management",
+                    "institution" => "Wise Publishing",
+                    "made_at" => "Apr, 2021",
+                    "message" => "Mark has an encyclopedic knowledge of our platforms. He is able to work directly with stakeholders to produce innovative products that drive growth. Mark provides guidance on best practices, making each project better than the last. He does all of that while remaining good-natured, patient and helpful — with all members of the team.",
+                ],
+                [
                     "name" => "Ron Tarr",
                     "position" => "Professor",
                     "institution" => "School of Information and Communications Technology, Seneca College, York Campus",
@@ -158,11 +165,19 @@ class GenerateProfile
             ],
             "work_experiences" => [
                 [
-                    "title" => "Developer Specialist",
+                    "title" => "Developer-Team Lead",
                     "company" => "Wise Publishing, Inc.",
                     "location" => "Toronto, Canada",
                     "start_date" => "Sept, 2019",
                     "end_date" => null,
+                    "description" => "Permanent Full-time",
+                ],
+                [
+                    "title" => "Developer Specialist",
+                    "company" => "Wise Publishing, Inc.",
+                    "location" => "Toronto, Canada",
+                    "start_date" => "Sept, 2019",
+                    "end_date" => "May, 2021",
                     "description" => "Permanent Full-time",
                 ],
                 [
