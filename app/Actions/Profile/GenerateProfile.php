@@ -12,7 +12,7 @@ class GenerateProfile
             "firstname" => "Mark Anthony",
             "lastname" => "Villaflor",
             "title" => "Computer Programmer / Backend Developer",
-            "description" => "Honours student of Seneca College with two web programming project completed.",
+            "description" => "Developer-Team Lead at Wise Publishing, Inc.",
             "email" => "mark@villaflor.ca",
             "photo" => "https://public.villaflor.one/images/K1EUwDZozJli4lc30sKfcDz4x1ixDX2EZeJ0n7es.jpg",
             "color" => "teal",
