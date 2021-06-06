@@ -23,6 +23,16 @@
     <link rel="stylesheet" href="css/app.css">
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="css/theme/{{$profile['color']}}.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVTYL7DH1G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GVTYL7DH1G');
+    </script>
 </head>
 
 <body>
