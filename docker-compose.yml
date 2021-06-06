@@ -19,6 +19,11 @@ services:
       - villaflor
       - backend
       - nginx-pm_default
+    healthcheck:
+      test: curl --fail -s http://localhost:80/ || exit 1
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
 networks:
   nginx-pm_default:
     external:
