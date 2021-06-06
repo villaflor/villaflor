@@ -1,6 +1,7 @@
-version: '3'
+version: '3.7'
 services:
   villaflor:
+    container_name: 'villaflor_ca_app'
     build:
       context: ./docker/PHP8.0
       dockerfile: Dockerfile
@@ -16,20 +17,20 @@ services:
     volumes:
       - '.:/var/www/html'
     networks:
-      - villaflor
+      - villaflor_ca
       - backend
-      - nginx-pm_default
+      - nginx_pm
     healthcheck:
       test: curl --fail -s http://localhost:80/ || exit 1
       interval: 1m30s
       timeout: 10s
       retries: 3
 networks:
-  nginx-pm_default:
+  nginx_pm:
     external:
-      name: nginx-pm_default
+      name: nginx_pm_network
   backend:
     external:
       name: backend_network
-  villaflor:
-    driver: bridge
+  villaflor_ca:
+    name: villaflor_ca_network
