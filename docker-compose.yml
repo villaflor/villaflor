@@ -17,58 +17,14 @@ services:
       - '.:/var/www/html'
     networks:
       - villaflor
+      - backend
       - nginx-pm_default
-    depends_on:
-      #            - mysql
-      - redis
-  #    mysql:
-  #        image: 'mysql:8.0'
-  #        ports:
-  #            - '${FORWARD_DB_PORT:-3306}:3306'
-  #        environment:
-  #            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
-  #            MYSQL_DATABASE: '${DB_DATABASE}'
-  #            MYSQL_USER: '${DB_USERNAME}'
-  #            MYSQL_PASSWORD: '${DB_PASSWORD}'
-  #            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
-  #        volumes:
-  ##            - 'villaflormysql:/var/lib/mysql'
-  #            - './data/mysql:/var/lib/mysql'
-  #        networks:
-  #            - villaflor
-  #        healthcheck:
-  #          test: ["CMD", "mysqladmin", "ping"]
-  redis:
-    image: 'redis:6.2-alpine'
-    restart: always
-    ports:
-      - '${FORWARD_REDIS_PORT:-6379}:6379'
-    volumes:
-      - './data/redis:/data'
-    networks:
-      - villaflor
-    healthcheck:
-      test: [ "CMD", "redis-cli", "ping" ]
-#    cron:
-#        build:
-#          context: ./docker/Crontab
-#          dockerfile: Dockerfile
-##        container_name: cron
-#        volumes:
-#          - '.:/var/www/html'
-#        networks:
-#          - villaflor
-#        depends_on:
-#            - mysql
-#            - redis
 networks:
   nginx-pm_default:
     external:
       name: nginx-pm_default
+  backend:
+    external:
+      name: backend_network
   villaflor:
     driver: bridge
-#volumes:
-#    villaflormysql:
-#        driver: local
-#    villaflorredis:
-#        driver: local
