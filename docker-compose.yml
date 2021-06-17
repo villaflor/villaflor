@@ -9,8 +9,8 @@ services:
         WWWGROUP: '${WWWGROUP:-20}'
     image: villaflor-8.0/app
     restart: always
-    ports:
-      - '${APP_PORT:-80}:80'
+#    ports:
+#      - '${APP_PORT:-80}:80'
     environment:
       WWWUSER: '${WWWUSER:-501}'
       LARAVEL_VILLAFLOR: 1
