@@ -19,14 +19,22 @@
                 class="uppercase tracking-wide font-bold w-full block flex-grow lg:flex lg:flex-initial lg:w-auto items-center mt-8 lg:mt-0"
             >
                 <li class="mr-8 mb-6 lg:mb-0">
-                    <Link class="text-copy-primary hover:text-gray-600 border-b-2 border-indigo-600" href="/">Home
-                    </Link>
+                    <NavLink :active="route().current('home')" :href="route('home')">
+                        Home
+                    </NavLink>
                 </li>
                 <li class="mr-8 mb-6 lg:mb-0">
-                    <Link class="text-copy-primary hover:text-gray-600" href="/about">About</Link>
+                    <MegaMenu/>
                 </li>
                 <li class="mr-8 mb-6 lg:mb-0">
-                    <Link class="text-copy-primary hover:text-gray-600" href="/contact">Contact</Link>
+                    <NavLink :active="route().current('about')" :href="route('about')">
+                        About
+                    </NavLink>
+                </li>
+                <li class="mr-8 mb-6 lg:mb-0">
+                    <NavLink :active="route().current('contact')" :href="route('contact')">
+                        Contact
+                    </NavLink>
                 </li>
             </ul>
         </nav>
@@ -35,14 +43,17 @@
 </template>
 
 <script>
-import {Head, Link} from '@inertiajs/inertia-vue3';
+import {Head} from '@inertiajs/inertia-vue3';
 import ApplicationLogo from "@/components/ApplicationLogo";
+import NavLink from "@/components/NavbarLink";
+import MegaMenu from "@/Layouts/MegaMenu";
 
 export default {
     components: {
         Head,
-        Link,
         ApplicationLogo,
+        NavLink,
+        MegaMenu,
     },
     data() {
         return {
