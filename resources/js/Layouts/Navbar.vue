@@ -24,7 +24,9 @@
                     </NavLink>
                 </li>
                 <li class="mr-8 mb-6 lg:mb-0">
-                    <MegaMenu/>
+                    <MegaMenu :active="route().current('packages')" :href="route('packages')">
+                        Packages
+                    </MegaMenu>
                 </li>
                 <li class="mr-8 mb-6 lg:mb-0">
                     <NavLink :active="route().current('about')" :href="route('about')">

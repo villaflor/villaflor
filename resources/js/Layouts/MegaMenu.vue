@@ -4,17 +4,9 @@
         @mouseleave="hideMenu"
         @mouseover="showMenu"
     >
-        <a
-            class="text-copy-primary hover:text-gray-600"
-            href="/#packages"
-            @focus="showMenu"
-            @keydown.shift.tab="hideMenu"
-            @keydown.esc.exact="hideMenu"
-            @keydown.up.exact.prevent="startArrowKeys"
-            @keydown.down.exact.prevent="startArrowKeys"
-        >
-            Packages
-        </a>
+        <Link :class="classes" :href="href">
+            <slot/>
+        </Link>
 
         <div class="absolute w-full">&nbsp;</div>
         <transition name="mega-menu-fade">
@@ -24,8 +16,7 @@
                     <ul class="w-full lg:w-1/2 px-4">
                         <li class="mb-8">
                             <MegaMenuLink
-                                href="/"
-                                :active=false
+                                href="https://packagist.org/packages/villaflor/connection"
                                 title="Connection"
                                 subtitle="Helps users connect to an API"
                                 :is-new="true">
@@ -40,8 +31,7 @@
                         </li>
                         <li class="mb-8 lg:mb-0">
                             <MegaMenuLink
-                                href="/"
-                                :active=false
+                                href="https://packagist.org/packages/villaflor/taboola-sdk"
                                 title="Taboola Report"
                                 subtitle="Track your Taboola campaigns"
                                 :is-new="true">
@@ -57,8 +47,7 @@
                     <ul class="w-full lg:w-1/2 px-4">
                         <li class="mb-8">
                             <MegaMenuLink
-                                href="/"
-                                :active=false
+                                href="https://packagist.org/packages/villaflor/laravel-cloudflare"
                                 title="Laravel Cloudflare"
                                 subtitle="Laravel library for Cloudflare API">
 
@@ -71,15 +60,14 @@
                         </li>
                         <li class="">
                             <MegaMenuLink
-                                href="/"
-                                :active=false
+                                href="https://packagist.org/packages/villaflor/laravel-ip-address"
                                 title="Laravel IP Address"
                                 subtitle="Laravel library that retrieves IP Address">
 
                                 <svg class="text-blue-500 group-hover:text-blue-800" fill="currentColor"
                                      height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="heroicon-ui"
-                                          d="M20 15a1 1 0 0 0 2 0V7a1 1 0 0 0-1-1h-8a1 1 0 0 0 0 2h5.59L13 13.59l-3.3-3.3a1 1 0 0 0-1.4 0l-6 6a1 1 0 0 0 1.4 1.42L9 12.4l3.3 3.3a1 1 0 0 0 1.4 0L20 9.4V15z"/>
+                                    <path d="M0 0h24v24H0V0z" fill="none"/>
+                                    <path d="M19 15v4H5v-4h14m1-2H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 18.5c-.82 0-1.5-.67-1.5-1.5s.68-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM19 5v4H5V5h14m1-2H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 8.5c-.82 0-1.5-.67-1.5-1.5S6.18 5.5 7 5.5s1.5.68 1.5 1.5S7.83 8.5 7 8.5z"/>
                                 </svg>
                             </MegaMenuLink>
                         </li>
@@ -122,11 +110,14 @@
 
 <script>
 
+import {Link} from "@inertiajs/inertia-vue3";
 import MegaMenuLink from "@/components/MegaMenuLink";
 import MegaMenuSubLink from "@/components/MegaMenuSubLink";
 
 export default {
+    props: ['href', 'active'],
     components: {
+        Link,
         MegaMenuLink,
         MegaMenuSubLink,
     },
@@ -138,6 +129,13 @@ export default {
             isVisible: false,
             menuItems: null,
             focusedIndex: 0,
+        }
+    },
+    computed: {
+        classes() {
+            return this.active
+                ? 'text-copy-primary hover:text-gray-600 border-b-2 border-indigo-600'
+                : 'text-copy-primary hover:text-gray-600'
         }
     },
     methods: {

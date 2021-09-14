@@ -26,3 +26,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return Inertia::render('Contact', []);
 })->name('contact');
+
+Route::get('/packages', function () {
+    return Inertia::render('Packages', []);
+})->name('packages');
