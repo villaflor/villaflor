@@ -11,9 +11,9 @@
         <div class="absolute w-full">&nbsp;</div>
         <transition name="mega-menu-fade">
             <div v-show="isVisible"
-                 class="mega-menu absolute normal-case font-normal bg-white shadow-md rounded-lg overflow-hidden border mt-4 w-full lg:w-160 z-30 lg:z-10 left-0 lg:-left-16">
-                <div class="flex flex-col lg:flex-row px-8 py-6 border-b -mx-4">
-                    <ul class="w-full lg:w-1/2 px-4">
+                 class="mega-menu absolute normal-case font-normal bg-white shadow-md rounded-lg overflow-hidden border mt-4 w-full lg:w-96 z-30 lg:z-10 left-0 lg:-left-16">
+                <div class="flex flex-col px-8 py-6 border-b -mx-4">
+                    <ul class="w-full px-4">
                         <li class="mb-8">
                             <MegaMenuLink
                                 href="https://packagist.org/packages/villaflor/connection"
@@ -29,7 +29,7 @@
 
                             </MegaMenuLink>
                         </li>
-                        <li class="mb-8 lg:mb-0">
+                        <li class="mb-8">
                             <MegaMenuLink
                                 href="https://packagist.org/packages/villaflor/taboola-sdk"
                                 title="Taboola Report"
@@ -44,7 +44,7 @@
                             </MegaMenuLink>
                         </li>
                     </ul>
-                    <ul class="w-full lg:w-1/2 px-4">
+                    <ul class="w-full px-4">
                         <li class="mb-8">
                             <MegaMenuLink
                                 href="https://packagist.org/packages/villaflor/laravel-cloudflare"

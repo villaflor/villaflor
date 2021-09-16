@@ -2,7 +2,7 @@
     <header class="border-t-4 border-blue-700 bg-white z-10 absolute w-full shadow-md">
 
         <nav class="container mx-auto px-6 flex flex-wrap justify-between items-center py-6">
-            <div class="mb-0 lg:mb-6 xl:mb-0">
+            <div class="mr-8 mb-0">
                 <ApplicationLogo/>
             </div>
             <div class="block lg:hidden">
