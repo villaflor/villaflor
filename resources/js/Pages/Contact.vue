@@ -1,10 +1,18 @@
 <template>
-    <Head title="Welcome" />
+    <Head title="Contact" />
 
     <div id="app" class="font-sans text-gray-800">
         <Navbar/>
-        <div class="bg-gray-100 min-h-screen pt-40 text-lg">
-            <Contact/>
+
+        <div class="min-h-screen flex flex-col">
+            <div class="flex-grow bg-gray-100 pt-40 text-lg">
+                <Contact/>
+            </div>
+
+            <div class="shadow-top-md">
+                <Footer/>
+            </div>
+
         </div>
     </div>
 </template>
@@ -17,13 +25,15 @@
 import { Head, Link } from '@inertiajs/inertia-vue3';
 import Contact from "@/components/Contact";
 import Navbar from "@/Layouts/Navbar";
+import Footer from "@/Layouts/Footer";
 
 export default {
     components: {
         Head,
         Link,
-        Contact,
         Navbar,
+        Contact,
+        Footer
     },
     data() {
         return {

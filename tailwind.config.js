@@ -12,6 +12,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                'serif': ['ui-serif', 'Georgia', ...defaultTheme.fontFamily.serif],
             },
             spacing: {
                 '80': '20rem',
@@ -26,11 +27,13 @@ module.exports = {
             },
             boxShadow: {
                 'outline-green': '0 0 0 3px rgba(5,202,160, 0.8)',
+                'top-md': '0 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 4px 1px rgba(0, 0, 0, 0.06)',
             },
         },
     },
 
     variants: {
+
         extend: {
             opacity: ['disabled'],
         },
