@@ -4,9 +4,9 @@
         @mouseleave="hideMenu"
         @mouseover="showMenu"
     >
-        <Link :class="classes" :href="href">
+<!--        <Link :class="classes" :href="href">-->
             <slot/>
-        </Link>
+<!--        </Link>-->
 
         <div class="absolute w-full">&nbsp;</div>
         <transition name="mega-menu-fade">
@@ -76,7 +76,7 @@
                 <ul class="bg-gray-100 px-8 py-8">
                     <li class="mb-6">
                         <MegaMenuSubLink
-                            href="/"
+                            href="/packages"
                             :active=false
                             title="Documentation"
                             subtitle="Start integrating packages">
@@ -117,7 +117,6 @@ import MegaMenuSubLink from "@/components/MegaMenuSubLink";
 export default {
     props: ['href', 'active'],
     components: {
-        Link,
         MegaMenuLink,
         MegaMenuSubLink,
     },
