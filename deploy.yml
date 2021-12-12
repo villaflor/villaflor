@@ -1,0 +1,33 @@
+import:
+  - recipe/laravel.php
+  - contrib/php-fpm.php
+  - contrib/npm.php
+
+config:
+  application: 'Villaflor'
+  repository: 'git@github.com:villaflor/villaflor.git'
+  php_fpm_version: '8.0'
+
+hosts:
+  production:
+    remote_user: 'forge'
+    hostname: 'oracle-web-server'
+    deploy_path: '~/app/villaflor.ca'
+
+tasks:
+  deploy:
+    - deploy:prepare
+    - deploy:vendors
+    - artisan:storage:link
+    - artisan:view:cache
+    - artisan:config:cache
+    - artisan:migrate
+    - npm:install
+    - npm:run:prod
+    - deploy:publish
+    - php-fpm:reload
+  npm:run:prod:
+    - run: 'cd {{release_path}} && npm run prod'
+
+after:
+  deploy:failed: deploy:unlock
