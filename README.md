@@ -1,5 +1,4 @@
 ### Hi there 👋
 
-My name is Mark Anthony M. Villaflor and I'm a software developer/web developer.
-I'm from The Philippines, living in Canada, and currently working at Wise Publishing Inc.
+I’m a passionate software developer with a knack for finding creative solutions to complex problems. I have an advanced diploma in Computer Programming and Analysis from Seneca College, and I'm currently working as a Software Engineer at Wise Publishing. I specialize in developing robust and secure applications, and I'm passionate about coding and exploring the latest technologies. I have also extensive experience in object-oriented programming. I strive to craft code that is well-structured, efficient, and secure, and I am always eager to learn and improve my skills. I'm also a strong believer in open source software, and I'm always looking for ways to contribute to the community. I enjoy spending time with my family, playing video games, and reading up on the latest tech trends.
 You can find me on [LinkedIn](https://www.linkedin.com/in/mark-anthony-villaflor/)
